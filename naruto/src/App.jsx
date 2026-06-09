@@ -1,13 +1,29 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useMemo } from "react";
+import { motion } from "framer-motion";
+import { Route, Routes } from "react-router-dom";
 
-import Navebar from './Components/Navebar'
-import Nav from './Components/Icons/Nav'
+import Navebar from "./Components/Navebar";
+import Home from "./Pages/Home";
 
 const App = () => {
+  const particles = useMemo(
+    () =>
+      Array.from({ length: 40 }, () => ({
+        width: Math.random() * 4 + 2,
+        height: Math.random() * 4 + 2,
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        duration: Math.random() * 5 + 5,
+        delay: Math.random() * 5,
+      })),
+    []
+  );
+
   return (
-    <div className='relative min-h-screen w-full overflow-x-hidden bg-[#171427] scroll-smooth py-5 px-10'>
-      <div className="absolute inset-0 bg-[#171427] opacity-90 z-0" />
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-[url(/Bg.png)] px-30 py-5 ">
+      
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-[url(/Bg.png)] opacity-90 z-0" />
 
       {/* Animated Gradient Circle 1 */}
       <motion.div
@@ -18,7 +34,7 @@ const App = () => {
         transition={{
           duration: 15,
           repeat: Infinity,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         }}/>
 
       {/* Animated Gradient Circle 2 */}
@@ -30,11 +46,11 @@ const App = () => {
         transition={{
           duration: 18,
           repeat: Infinity,
-          ease: 'easeInOut',
+          ease: "easeInOut",
         }}/>
 
       {/* Floating Particles */}
-      {[...Array(40)].map((_, i) => (
+      {particles.map((particle, i) => (
         <motion.div
           key={i}
           animate={{
@@ -42,24 +58,30 @@ const App = () => {
             opacity: [0, 1, 0],
           }}
           transition={{
-            duration: Math.random() * 5 + 5,
+            duration: particle.duration,
             repeat: Infinity,
-            delay: Math.random() * 5,
+            delay: particle.delay,
           }}
-          className="absolute bg-white rounded-full z-0"
+          className="absolute rounded-full bg-white z-0"
           style={{
-            width: Math.random() * 4 + 2,
-            height: Math.random() * 4 + 2,
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
+            width: particle.width,
+            height: particle.height,
+            left: particle.left,
+            top: particle.top,
           }}
         />
       ))}
 
-      <Navebar/>
-      
+      {/* Main Content */}
+      <div className="relative z-10">
+        <Navebar />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default App
