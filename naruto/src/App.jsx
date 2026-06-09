@@ -2,11 +2,12 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 import Navebar from './Components/Navebar'
+import Nav from './Components/Icons/Nav'
 
 const App = () => {
   return (
-    <div className='relative min-h-screen w-full overflow-x-hidden bg-[#0a0a0a] scroll-smooth py-5 px-10'>
-      <div className="absolute inset-0 bg-[#191622] opacity-90 z-0" />
+    <div className='relative min-h-screen w-full overflow-x-hidden bg-[#171427] scroll-smooth py-5 px-10'>
+      <div className="absolute inset-0 bg-[#171427] opacity-90 z-0" />
 
       {/* Animated Gradient Circle 1 */}
       <motion.div
@@ -56,6 +57,7 @@ const App = () => {
       ))}
 
       <Navebar/>
+      
     </div>
   )
 }
