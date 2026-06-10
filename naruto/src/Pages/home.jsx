@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Card from './Card';
 
 const home = () => {
+  
   return (
     <div className='absolute top-100 left-20 '>
       <motion.h1

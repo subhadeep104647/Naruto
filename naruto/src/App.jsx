@@ -8,6 +8,7 @@ import Pain from "./Components/Icons/Pain";
 import Card from "./Pages/Card";
 
 const App = () => {
+  
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Animated Background */}
