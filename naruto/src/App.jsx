@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import Navebar from "./components/Navebar";
+import Navebar from "./Components/Navebar";
 import Home from "./pages/Home";
 import Hinata from "./pages/Hinata";
 import Card from "./pages/Card";
