@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronRight, ChevronLeft  } from "lucide-react";
 
-import Pain from './Hinata';
 
 const Card = () => {
   return (

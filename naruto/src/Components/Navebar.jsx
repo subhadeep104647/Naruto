@@ -1,6 +1,6 @@
 import React from 'react'
-import Logo from './Icons/Logo'
-import Nav from './Icons/Nav'
+import Logo from './icons/Logo'
+import Nav from './icons/Nav'
 
 const Navebar = () => {
   return (

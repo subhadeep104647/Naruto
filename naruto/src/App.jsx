@@ -2,10 +2,10 @@ import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import Navebar from "./Components/Navebar";
-import Home from "./Pages/Home";
-import Hinata from "./Pages/Hinata";
-import Card from "./Pages/Card";
+import Navebar from "./components/Navebar";
+import Home from "./pages/Home";
+import Hinata from "./pages/Hinata";
+import Card from "./pages/Card";
 
 const App = () => {
   const location = useLocation();
