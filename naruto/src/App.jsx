@@ -3,9 +3,9 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import Navebar from "./Components/Navebar";
-import Home from "./pages/Home";
-import Hinata from "./pages/Hinata";
-import Card from "./pages/Card";
+import Home from "./page/Home";
+import Hinata from "./page/Hinata";
+import Card from "./page/Card";
 
 const App = () => {
   const location = useLocation();
