@@ -1,21 +1,28 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import Navebar from "./Components/Navebar";
 import Home from "./Pages/Home";
-import Pain from "./Components/Icons/Pain";
+import Hinata from "./Pages/Hinata";
 import Card from "./Pages/Card";
 
 const App = () => {
-  
+  const location = useLocation();
+
+  const backgroundImage =
+    location.pathname === "/"
+      ? "/Bg.png" // Home page only
+      : "/Bg2.png"; // All other pages
+
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Animated Background */}
       <motion.div
+        key={backgroundImage}
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('/Bg.png')",
+          backgroundImage: `url(${backgroundImage})`,
         }}
         initial={{
           scale: 1.2,
@@ -90,7 +97,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Card" element={<Card />} />
-          <Route path="/pain" element={<Pain />} />
+          <Route path="/Hinata" element={<Hinata />} />
         </Routes>
       </motion.div>
     </div>
