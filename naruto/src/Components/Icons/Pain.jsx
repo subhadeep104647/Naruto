@@ -2,7 +2,7 @@ import React from 'react'
 
 const Pain = () => {
   return (
-    <div className='bg-amber- flex flex-row w-full mt-8 items-center justify-between gap-5'>
+    <div className='bg-amber- flex flex-row w-full mt-3 items-center justify-between gap-5'>
 
         <div className=' flex flex-col w-1/2 gap-10'>
           <div><h1 className=' text-gray-200 tracking-widest text-sm font-semibold border-2 border-gray-600 w-50 flex items-center justify-center py-1 rounded-l-full rounded-r-full bg-white/5 backdrop-blur-2xl'>AKATSUKI LEADER</h1></div>
@@ -11,7 +11,7 @@ const Pain = () => {
         </div>
 
         <div className='w-1/2'>
-        <img src="/PainLogo.svg" alt="My Pic" className='h-150 ml-22'/>
+        <img src="/Pain.svg" alt="My Pic" className='h-150 ml-22'/>
         </div>
 
     </div>
