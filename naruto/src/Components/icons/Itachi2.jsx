@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 
-const NarutoStat = ({
+const ItachiStat = ({
   age,
   height,
   power,
-  kurama,
-  sage,
+  sharingan,
+  mangekyo,
+  susanoo,
   delay,
 }) => (
   <motion.div
@@ -18,14 +19,14 @@ const NarutoStat = ({
       delay,
       duration: 1,
     }}
-    className="bg-black/60 backdrop-blur-md border border-orange-700 rounded-xl p-3 mt-4 w-44"
+    className="bg-black/60 backdrop-blur-md border border-red-700 rounded-xl p-3 mt-4 w-44"
   >
     <p className="text-gray-300 text-xs">Age: {age}</p>
     <p className="text-gray-300 text-xs">Height: {height}</p>
 
     {/* Power */}
     <div className="mt-2">
-      <p className="text-orange-300 text-xs mb-1">Power</p>
+      <p className="text-red-300 text-xs mb-1">Power</p>
 
       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
         <motion.div
@@ -35,49 +36,68 @@ const NarutoStat = ({
             delay: delay + 0.5,
             duration: 1.5,
           }}
-          className="h-full bg-gradient-to-r from-yellow-400 to-orange-500"
+          className="h-full bg-gradient-to-r from-red-500 to-orange-500"
         />
       </div>
 
       <p className="text-xs text-gray-400 mt-1">{power}</p>
     </div>
 
-    {/* Kurama Chakra */}
+    {/* Sharingan */}
     <div className="mt-3">
-      <p className="text-red-400 text-xs mb-1">Kurama Chakra</p>
+      <p className="text-red-400 text-xs mb-1">Sharingan</p>
 
       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: kurama }}
+          animate={{ width: sharingan }}
           transition={{
             delay: delay + 0.8,
             duration: 1.5,
           }}
-          className="h-full bg-gradient-to-r from-red-600 to-orange-400"
+          className="h-full bg-gradient-to-r from-red-700 to-red-400"
         />
       </div>
 
-      <p className="text-xs text-gray-400 mt-1">{kurama}</p>
+      <p className="text-xs text-gray-400 mt-1">{sharingan}</p>
     </div>
 
-    {/* Sage Mode */}
+    {/* Mangekyo Sharingan */}
     <div className="mt-3">
-      <p className="text-green-400 text-xs mb-1">Sage Mode</p>
+      <p className="text-purple-400 text-xs mb-1">Mangekyō</p>
 
       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: sage }}
+          animate={{ width: mangekyo }}
           transition={{
             delay: delay + 1.1,
             duration: 1.5,
           }}
-          className="h-full bg-gradient-to-r from-green-500 to-lime-400"
+          className="h-full bg-gradient-to-r from-purple-700 to-pink-500"
         />
       </div>
 
-      <p className="text-xs text-gray-400 mt-1">{sage}</p>
+      <p className="text-xs text-gray-400 mt-1">{mangekyo}</p>
+    </div>
+
+    {/* Susanoo */}
+    <div className="mt-3">
+      <p className="text-cyan-300 text-xs mb-1">Susanoo</p>
+
+      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: susanoo }}
+          transition={{
+            delay: delay + 1.4,
+            duration: 1.5,
+          }}
+          className="h-full bg-gradient-to-r from-cyan-400 to-blue-500"
+        />
+      </div>
+
+      <p className="text-xs text-gray-400 mt-1">{susanoo}</p>
     </div>
   </motion.div>
 );
@@ -95,7 +115,7 @@ const imageVariant = {
   },
 };
 
-const Naruto2 = () => {
+const Itachi2 = () => {
   return (
     <div className="flex flex-col items-center justify-between h-full gap-20">
       {/* Header */}
@@ -116,19 +136,19 @@ const Naruto2 = () => {
             }}
             className="p-2 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Naruto">
+            <Link to="/Itachi">
               <ChevronLeft size={12} />
             </Link>
           </motion.button>
         </motion.div>
 
         <motion.h1
-          className="bg-gradient-to-r from-orange-400 via-yellow-300 to-orange-600 bg-clip-text text-transparent text-2xl md:text-4xl font-serif tracking-[8px]"
+          className="bg-gradient-to-r from-red-500 via-red-300 to-orange-400 bg-clip-text text-transparent text-2xl md:text-4xl font-serif tracking-[8px]"
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
         >
-          NARUTO UZUMAKI
+          ITACHI UCHIHA
         </motion.h1>
       </div>
 
@@ -136,107 +156,137 @@ const Naruto2 = () => {
       <div className="w-full rounded-3xl bg-black/40 backdrop-blur-lg border border-gray-800 p-8">
         <div className="flex flex-row items-end justify-between gap-5">
 
+          {/* Itachi 1 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 1.5, delay: 0 }}
-              src="/Naruto1.svg"
-              alt="Young Naruto"
-              className="h-60"
+              transition={{
+                duration: 1.5,
+                delay: 0,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              src="/Itachi1.svg"
+              alt="Young Itachi"
+              className="h-50"
             />
 
-            <NarutoStat
-              age="8"
-              height="145 cm"
+            <ItachiStat
+              age="5"
+              height="118 cm"
               power="20%"
-              kurama="10%"
-              sage="0%"
+              sharingan="0%"
+              mangekyo="0%"
+              susanoo="0%"
               delay={0}
             />
           </div>
 
+          {/* Itachi 2 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 1.5, delay: 3 }}
-              src="/Naruto2.svg"
-              alt="Genin Naruto"
-              className="h-70 -mt-10"
+              transition={{
+                duration: 1.5,
+                delay: 3,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              src="/Itachi2.svg"
+              alt="Young Uchiha Itachi"
+              className="h-80 -mt-20"
             />
 
-            <NarutoStat
-              age="12"
-              height="153 cm"
+            <ItachiStat
+              age="10"
+              height="145 cm"
               power="45%"
-              kurama="35%"
-              sage="0%"
+              sharingan="60%"
+              mangekyo="0%"
+              susanoo="0%"
               delay={3}
             />
           </div>
 
+          {/* Itachi 3 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 1.5, delay: 6 }}
-              src="/Naruto3.svg"
-              alt="Sage Naruto"
+              transition={{
+                duration: 1.5,
+                delay: 6,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              src="/Itachi3.svg"
+              alt="ANBU Itachi"
               className="h-90 -mt-20"
             />
 
-            <NarutoStat
-              age="16"
-              height="166 cm"
+            <ItachiStat
+              age="13"
+              height="168 cm"
               power="70%"
-              kurama="65%"
-              sage="100%"
+              sharingan="90%"
+              mangekyo="85%"
+              susanoo="40%"
               delay={6}
             />
           </div>
 
+          {/* Itachi 4 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 1.5, delay: 9 }}
-              src="/Naruto4.svg"
-              alt="KCM Naruto"
+              transition={{
+                duration: 1.5,
+                delay: 9,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              src="/Itachi4.svg"
+              alt="Akatsuki Itachi"
               className="h-100 -mt-30"
             />
 
-            <NarutoStat
-              age="20"
-              height="180 cm"
+            <ItachiStat
+              age="17"
+              height="178 cm"
               power="90%"
-              kurama="95%"
-              sage="100%"
+              sharingan="100%"
+              mangekyo="100%"
+              susanoo="90%"
               delay={9}
             />
           </div>
 
+          {/* Itachi 5 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 1.5, delay: 12 }}
-              src="/Naruto5.svg"
-              alt="Hokage Naruto"
+              transition={{
+                duration: 1.5,
+                delay: 12,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              src="/Itachi5.svg"
+              alt="Prime Itachi"
               className="h-120 -mt-40"
             />
 
-            <NarutoStat
-              age="20"
-              height="180 cm"
+            <ItachiStat
+              age="21"
+              height="178 cm"
               power="100%"
-              kurama="100%"
-              sage="100%"
+              sharingan="100%"
+              mangekyo="100%"
+              susanoo="100%"
               delay={12}
             />
           </div>
@@ -247,4 +297,4 @@ const Naruto2 = () => {
   );
 };
 
-export default Naruto2;
+export default Itachi2;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const Hinata = () => {
+const Kakashi = () => {
   return (
     <>
       <div className="flex flex-row w-full mt-3 items-center justify-between gap-5">
@@ -22,8 +22,8 @@ const Hinata = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 1.2 }}
           >
-            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-purple-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
-              HYUGA PRINCESS
+            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-blue-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
+              COPY NINJA
             </h1>
           </motion.div>
 
@@ -33,13 +33,13 @@ const Hinata = () => {
             transition={{ delay: 0.5, duration: 1.8 }}
           >
             <h1 className="text-gray-300 font-sans text-3xl tracking-wide leading-15">
-              NEVER GO BACK ON YOUR WORD
+              THOSE WHO BREAK THE RULES
               <br />
-              BECAUSE THAT IS YOUR NINJA WAY
+              ARE SCUM
               <br />
-              I USED TO ALWAYS CRY
+              BUT THOSE WHO ABANDON
               <br />
-              AND GIVE UP TOO EASILY
+              THEIR FRIENDS ARE WORSE
             </h1>
           </motion.div>
 
@@ -48,13 +48,14 @@ const Hinata = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 2.2 }}
           >
-            <p className="text-purple-300 text-lg tracking-wide leading-8">
-              Hinata Hyuga is a kunoichi of Konohagakure and a member of the
-              prestigious Hyuga Clan. Known for her gentle nature, kindness,
-              and unwavering determination, Hinata overcame her self-doubt to
-              become a powerful ninja. Inspired by Naruto Uzumaki's courage,
-              she grew stronger through perseverance and eventually became one
-              of the most respected kunoichi of the Hidden Leaf Village.
+            <p className="text-blue-300 text-lg tracking-wide leading-8">
+              Kakashi Hatake is one of the most respected shinobi in
+              Konohagakure and the legendary leader of Team 7. Known as the
+              Copy Ninja, Kakashi mastered over a thousand jutsu and earned
+              fame throughout the ninja world. Despite his calm and laid-back
+              personality, he possesses exceptional intelligence, leadership,
+              and combat skills. He later became the Sixth Hokage and played a
+              crucial role in ending the Fourth Great Ninja War.
             </p>
           </motion.div>
         </motion.div>
@@ -78,8 +79,8 @@ const Hinata = () => {
             }}
           >
             <img
-              src="/Hinata.svg"
-              alt="Hinata Hyuga"
+              src="/Kakashi.svg"
+              alt="Kakashi Hatake"
               className="h-150"
             />
           </motion.div>
@@ -87,7 +88,7 @@ const Hinata = () => {
       </div>
 
       {/* Navigation Buttons */}
-      <div className=" flex flex-row justify-between items-center">
+      <div className="flex flex-row justify-between items-center">
         {/* Previous */}
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -104,21 +105,24 @@ const Hinata = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Naruto">
+            <Link to="/Sakura">
               <ChevronLeft size={15} />
             </Link>
           </motion.button>
         </motion.div>
 
-        <div><Link to='/Hinata2'>
-           <motion.h1
-                   className="bg-gradient-to-r from-purple-400 via-pink-300 to-indigo-400 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px] text-shadow-2xl"
-                   initial={{ opacity: 0, y: 80 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   transition={{ duration: 1.5 }}>
-                   SELECT HERO
-                   </motion.h1>
-        </Link></div>
+        <div>
+          <Link to="/Kakashi2">
+            <motion.h1
+              className="bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-500 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px]"
+              initial={{ opacity: 0, y: 80 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5 }}
+            >
+              SELECT HERO
+            </motion.h1>
+          </Link>
+        </div>
 
         {/* Next */}
         <motion.div
@@ -136,7 +140,7 @@ const Hinata = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Sakura">
+            <Link to="/">
               <ChevronRight size={15} />
             </Link>
           </motion.button>
@@ -146,4 +150,4 @@ const Hinata = () => {
   );
 };
 
-export default Hinata;
+export default Kakashi;

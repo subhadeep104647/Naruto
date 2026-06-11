@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 
-const NarutoStat = ({
+const KakashiStat = ({
   age,
   height,
   power,
-  kurama,
-  sage,
+  sharingan,
   delay,
 }) => (
   <motion.div
@@ -18,14 +17,14 @@ const NarutoStat = ({
       delay,
       duration: 1,
     }}
-    className="bg-black/60 backdrop-blur-md border border-orange-700 rounded-xl p-3 mt-4 w-44"
+    className="bg-black/60 backdrop-blur-md border border-cyan-700 rounded-xl p-3 mt-4 w-40"
   >
     <p className="text-gray-300 text-xs">Age: {age}</p>
     <p className="text-gray-300 text-xs">Height: {height}</p>
 
     {/* Power */}
     <div className="mt-2">
-      <p className="text-orange-300 text-xs mb-1">Power</p>
+      <p className="text-cyan-300 text-xs mb-1">Power</p>
 
       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
         <motion.div
@@ -35,49 +34,30 @@ const NarutoStat = ({
             delay: delay + 0.5,
             duration: 1.5,
           }}
-          className="h-full bg-gradient-to-r from-yellow-400 to-orange-500"
+          className="h-full bg-gradient-to-r from-cyan-400 to-blue-500"
         />
       </div>
 
       <p className="text-xs text-gray-400 mt-1">{power}</p>
     </div>
 
-    {/* Kurama Chakra */}
+    {/* Sharingan */}
     <div className="mt-3">
-      <p className="text-red-400 text-xs mb-1">Kurama Chakra</p>
+      <p className="text-red-400 text-xs mb-1">Sharingan</p>
 
       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: kurama }}
+          animate={{ width: sharingan }}
           transition={{
             delay: delay + 0.8,
             duration: 1.5,
           }}
-          className="h-full bg-gradient-to-r from-red-600 to-orange-400"
+          className="h-full bg-gradient-to-r from-red-700 via-red-500 to-red-300"
         />
       </div>
 
-      <p className="text-xs text-gray-400 mt-1">{kurama}</p>
-    </div>
-
-    {/* Sage Mode */}
-    <div className="mt-3">
-      <p className="text-green-400 text-xs mb-1">Sage Mode</p>
-
-      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: sage }}
-          transition={{
-            delay: delay + 1.1,
-            duration: 1.5,
-          }}
-          className="h-full bg-gradient-to-r from-green-500 to-lime-400"
-        />
-      </div>
-
-      <p className="text-xs text-gray-400 mt-1">{sage}</p>
+      <p className="text-xs text-gray-400 mt-1">{sharingan}</p>
     </div>
   </motion.div>
 );
@@ -95,7 +75,7 @@ const imageVariant = {
   },
 };
 
-const Naruto2 = () => {
+const Kakashi2 = () => {
   return (
     <div className="flex flex-col items-center justify-between h-full gap-20">
       {/* Header */}
@@ -116,19 +96,19 @@ const Naruto2 = () => {
             }}
             className="p-2 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Naruto">
+            <Link to="/Kakashi">
               <ChevronLeft size={12} />
             </Link>
           </motion.button>
         </motion.div>
 
         <motion.h1
-          className="bg-gradient-to-r from-orange-400 via-yellow-300 to-orange-600 bg-clip-text text-transparent text-2xl md:text-4xl font-serif tracking-[8px]"
+          className="bg-gradient-to-r from-cyan-400 via-blue-300 to-indigo-500 bg-clip-text text-transparent text-2xl md:text-4xl font-serif tracking-[8px]"
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
         >
-          NARUTO UZUMAKI
+          KAKASHI HATAKE
         </motion.h1>
       </div>
 
@@ -136,107 +116,127 @@ const Naruto2 = () => {
       <div className="w-full rounded-3xl bg-black/40 backdrop-blur-lg border border-gray-800 p-8">
         <div className="flex flex-row items-end justify-between gap-5">
 
+          {/* Kakashi 1 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 1.5, delay: 0 }}
-              src="/Naruto1.svg"
-              alt="Young Naruto"
+              transition={{
+                duration: 1.5,
+                delay: 0,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              src="/Kakashi1.svg"
+              alt="Young Kakashi"
               className="h-60"
             />
 
-            <NarutoStat
-              age="8"
-              height="145 cm"
+            <KakashiStat
+              age="5"
+              height="120 cm"
               power="20%"
-              kurama="10%"
-              sage="0%"
+              sharingan="0%"
               delay={0}
             />
           </div>
 
+          {/* Kakashi 2 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 1.5, delay: 3 }}
-              src="/Naruto2.svg"
-              alt="Genin Naruto"
+              transition={{
+                duration: 1.5,
+                delay: 3,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              src="/Kakashi2.svg"
+              alt="Genin Kakashi"
               className="h-70 -mt-10"
             />
 
-            <NarutoStat
-              age="12"
-              height="153 cm"
+            <KakashiStat
+              age="9"
+              height="140 cm"
               power="45%"
-              kurama="35%"
-              sage="0%"
+              sharingan="25%"
               delay={3}
             />
           </div>
 
+          {/* Kakashi 3 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 1.5, delay: 6 }}
-              src="/Naruto3.svg"
-              alt="Sage Naruto"
+              transition={{
+                duration: 1.5,
+                delay: 6,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              src="/Kakashi3.svg"
+              alt="ANBU Kakashi"
               className="h-90 -mt-20"
             />
 
-            <NarutoStat
-              age="16"
-              height="166 cm"
+            <KakashiStat
+              age="14"
+              height="168 cm"
               power="70%"
-              kurama="65%"
-              sage="100%"
+              sharingan="70%"
               delay={6}
             />
           </div>
 
+          {/* Kakashi 4 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 1.5, delay: 9 }}
-              src="/Naruto4.svg"
-              alt="KCM Naruto"
+              transition={{
+                duration: 1.5,
+                delay: 9,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              src="/Kakashi4.svg"
+              alt="Jonin Kakashi"
               className="h-100 -mt-30"
             />
 
-            <NarutoStat
-              age="20"
-              height="180 cm"
+            <KakashiStat
+              age="18"
+              height="181 cm"
               power="90%"
-              kurama="95%"
-              sage="100%"
+              sharingan="95%"
               delay={9}
             />
           </div>
 
+          {/* Kakashi 5 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 1.5, delay: 12 }}
-              src="/Naruto5.svg"
-              alt="Hokage Naruto"
+              transition={{
+                duration: 1.5,
+                delay: 12,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              src="/Kakashi5.svg"
+              alt="Sixth Hokage Kakashi"
               className="h-120 -mt-40"
             />
 
-            <NarutoStat
-              age="20"
-              height="180 cm"
+            <KakashiStat
+              age="25"
+              height="181 cm"
               power="100%"
-              kurama="100%"
-              sage="100%"
+              sharingan="100%"
               delay={12}
             />
           </div>
@@ -247,4 +247,4 @@ const Naruto2 = () => {
   );
 };
 
-export default Naruto2;
+export default Kakashi2;

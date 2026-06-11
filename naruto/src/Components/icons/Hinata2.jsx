@@ -203,7 +203,7 @@ const Hinata2 = () => {
             />
 
             <HinataStat
-              age="17"
+              age="20"
               height="163 cm"
               power="100%"
               delay={12}

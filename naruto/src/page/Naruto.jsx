@@ -106,7 +106,7 @@ const Naruto = () => {
             }}
             className=" p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg "
           >
-            <Link to="/">
+            <Link to="/Sasuke">
               <ChevronLeft  size={15} />
             </Link>
           </motion.button>

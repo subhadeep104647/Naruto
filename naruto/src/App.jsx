@@ -9,6 +9,14 @@ import Card from "./page/Card";
 import Naruto from "./page/Naruto";
 import Naruto2 from "./Components/icons/Naruto2";
 import Hinata2 from "./Components/icons/Hinata2";
+import Sakura from "./page/Sakura";
+import Kakashi from "./page/Kakashi";
+import Kakashi2 from "./Components/icons/Kakashi2";
+import Sakura2 from "./Components/icons/Sakura2";
+import Sasuke from "./page/Sasuke";
+import Sasuke2 from "./Components/icons/Sasuke2";
+import Itachi2 from "./Components/icons/Itachi2";
+import Itachi from "./page/Itachi";
 
 const App = () => {
   const location = useLocation();
@@ -106,6 +114,14 @@ const App = () => {
           <Route path="/Naruto" element={<Naruto />} />
           <Route path="/Naruto2" element={<Naruto2 />} />
           <Route path="/Hinata2" element={<Hinata2 />} />
+          <Route path="/Sakura" element={<Sakura />} />
+          <Route path="/Sakura2" element={<Sakura2 />} />
+          <Route path="/Kakashi" element={<Kakashi />} />
+          <Route path="/Kakashi2" element={<Kakashi2 />} />
+          <Route path="/Sasuke" element={<Sasuke/>} />
+          <Route path="/Sasuke2" element={<Sasuke2/>} />
+          <Route path="/Itachi" element={<Itachi/>} />
+          <Route path="/Itachi2" element={<Itachi2/>} />
         </Routes>
       </motion.div>
     </div>

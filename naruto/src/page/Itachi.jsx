@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const Hinata = () => {
+const Itachi = () => {
   return (
     <>
       <div className="flex flex-row w-full mt-3 items-center justify-between gap-5">
@@ -22,8 +22,8 @@ const Hinata = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 1.2 }}
           >
-            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-purple-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
-              HYUGA PRINCESS
+            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-red-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
+              UCHIHA PRODIGY
             </h1>
           </motion.div>
 
@@ -33,13 +33,13 @@ const Hinata = () => {
             transition={{ delay: 0.5, duration: 1.8 }}
           >
             <h1 className="text-gray-300 font-sans text-3xl tracking-wide leading-15">
-              NEVER GO BACK ON YOUR WORD
+              PEOPLE LIVE THEIR LIVES
               <br />
-              BECAUSE THAT IS YOUR NINJA WAY
+              BOUND BY WHAT THEY ACCEPT
               <br />
-              I USED TO ALWAYS CRY
+              AS CORRECT AND TRUE
               <br />
-              AND GIVE UP TOO EASILY
+              THAT IS HOW THEY DEFINE REALITY
             </h1>
           </motion.div>
 
@@ -48,13 +48,13 @@ const Hinata = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 2.2 }}
           >
-            <p className="text-purple-300 text-lg tracking-wide leading-8">
-              Hinata Hyuga is a kunoichi of Konohagakure and a member of the
-              prestigious Hyuga Clan. Known for her gentle nature, kindness,
-              and unwavering determination, Hinata overcame her self-doubt to
-              become a powerful ninja. Inspired by Naruto Uzumaki's courage,
-              she grew stronger through perseverance and eventually became one
-              of the most respected kunoichi of the Hidden Leaf Village.
+            <p className="text-red-300 text-lg tracking-wide leading-8">
+              Itachi Uchiha was one of the most gifted shinobi in the history
+              of Konohagakure. A genius of the Uchiha Clan, he sacrificed
+              everything to protect the Hidden Leaf Village and his younger
+              brother, Sasuke. Though branded a criminal, Itachi secretly
+              carried the burden of peace upon his shoulders and remains one of
+              the most respected and tragic heroes in the Naruto world.
             </p>
           </motion.div>
         </motion.div>
@@ -78,8 +78,8 @@ const Hinata = () => {
             }}
           >
             <img
-              src="/Hinata.svg"
-              alt="Hinata Hyuga"
+              src="/Itachi.svg"
+              alt="Itachi Uchiha"
               className="h-150"
             />
           </motion.div>
@@ -87,7 +87,7 @@ const Hinata = () => {
       </div>
 
       {/* Navigation Buttons */}
-      <div className=" flex flex-row justify-between items-center">
+      <div className="flex flex-row justify-between items-center">
         {/* Previous */}
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -104,21 +104,24 @@ const Hinata = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Naruto">
+            <Link to="/">
               <ChevronLeft size={15} />
             </Link>
           </motion.button>
         </motion.div>
 
-        <div><Link to='/Hinata2'>
-           <motion.h1
-                   className="bg-gradient-to-r from-purple-400 via-pink-300 to-indigo-400 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px] text-shadow-2xl"
-                   initial={{ opacity: 0, y: 80 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   transition={{ duration: 1.5 }}>
-                   SELECT HERO
-                   </motion.h1>
-        </Link></div>
+        <div>
+          <Link to="/Itachi2">
+            <motion.h1
+              className="bg-gradient-to-r from-red-500 via-red-300 to-orange-400 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px]"
+              initial={{ opacity: 0, y: 80 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5 }}
+            >
+              SELECT HERO
+            </motion.h1>
+          </Link>
+        </div>
 
         {/* Next */}
         <motion.div
@@ -136,7 +139,7 @@ const Hinata = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Sakura">
+            <Link to="/Sasuke">
               <ChevronRight size={15} />
             </Link>
           </motion.button>
@@ -146,4 +149,4 @@ const Hinata = () => {
   );
 };
 
-export default Hinata;
+export default Itachi;
