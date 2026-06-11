@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const Itachi = () => {
+const Obito = () => {
   return (
     <>
       <div className="flex flex-row w-full mt-3 items-center justify-between gap-5">
@@ -22,8 +22,8 @@ const Itachi = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 1.2 }}
           >
-            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-red-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
-              UCHIHA PRODIGY
+            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-orange-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
+              HACKER UCHIHA
             </h1>
           </motion.div>
 
@@ -33,13 +33,13 @@ const Itachi = () => {
             transition={{ delay: 0.5, duration: 1.8 }}
           >
             <h1 className="text-gray-300 font-sans text-3xl tracking-wide leading-15">
-              PEOPLE LIVE THEIR LIVES
+              IN THIS WORLD
               <br />
-              BOUND BY WHAT THEY ACCEPT
+              WHEREVER THERE IS LIGHT
               <br />
-              AS CORRECT AND TRUE
+              THERE ARE ALSO SHADOWS
               <br />
-              THAT IS HOW THEY DEFINE REALITY
+              AS LONG AS THERE IS HOPE
             </h1>
           </motion.div>
 
@@ -48,13 +48,14 @@ const Itachi = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 2.2 }}
           >
-            <p className="text-red-300 text-lg tracking-wide leading-8">
-              Itachi Uchiha was one of the most gifted shinobi in the history
-              of Konohagakure. A genius of the Uchiha Clan, he sacrificed
-              everything to protect the Hidden Leaf Village and his younger
-              brother, Sasuke. Though branded a criminal, Itachi secretly
-              carried the burden of peace upon his shoulders and remains one of
-              the most respected and tragic heroes in the Naruto world.
+            <p className="text-orange-300 text-lg tracking-wide leading-8">
+              Obito Uchiha was once a cheerful and kind-hearted shinobi of the
+              Hidden Leaf Village who dreamed of becoming Hokage. After
+              witnessing tragedy and manipulation, he descended into darkness
+              and became one of the greatest threats the ninja world had ever
+              faced. Despite his fall, Obito eventually rediscovered his true
+              self and sacrificed everything to help save the world, proving
+              that redemption is always possible.
             </p>
           </motion.div>
         </motion.div>
@@ -78,8 +79,8 @@ const Itachi = () => {
             }}
           >
             <img
-              src="/Itachi.svg"
-              alt="Itachi Uchiha"
+              src="/Obito.svg"
+              alt="Obito Uchiha"
               className="h-150"
             />
           </motion.div>
@@ -104,16 +105,17 @@ const Itachi = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Shisui">
+            <Link to="/Madara">
               <ChevronLeft size={15} />
             </Link>
           </motion.button>
         </motion.div>
 
+        {/* Select Hero */}
         <div>
-          <Link to="/Itachi2">
+          <Link to="/Obito2">
             <motion.h1
-              className="bg-gradient-to-r from-red-500 via-red-300 to-orange-400 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px]"
+              className="bg-gradient-to-r from-orange-500 via-red-400 to-purple-500 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px]"
               initial={{ opacity: 0, y: 80 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5 }}
@@ -139,7 +141,7 @@ const Itachi = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Sasuke">
+            <Link to="/Shisui">
               <ChevronRight size={15} />
             </Link>
           </motion.button>
@@ -149,4 +151,4 @@ const Itachi = () => {
   );
 };
 
-export default Itachi;
+export default Obito;

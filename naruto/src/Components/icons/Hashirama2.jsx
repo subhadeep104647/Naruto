@@ -3,7 +3,14 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 
-const SakuraStat = ({ age, height, power, delay }) => (
+const HashiramaStat = ({
+  age,
+  height,
+  power,
+  woodRelease,
+  sageMode,
+  delay,
+}) => (
   <motion.div
     initial={{ opacity: 0, y: 40 }}
     animate={{ opacity: 1, y: 0 }}
@@ -11,13 +18,14 @@ const SakuraStat = ({ age, height, power, delay }) => (
       delay,
       duration: 1,
     }}
-    className="bg-black/60 backdrop-blur-md border border-pink-700 rounded-xl p-3 mt-4 w-40"
+    className="bg-black/60 backdrop-blur-md border border-green-700 rounded-xl p-3 mt-4 w-44"
   >
     <p className="text-gray-300 text-xs">Age: {age}</p>
     <p className="text-gray-300 text-xs">Height: {height}</p>
 
+    {/* Power */}
     <div className="mt-2">
-      <p className="text-pink-300 text-xs mb-1">Power</p>
+      <p className="text-green-300 text-xs mb-1">Power</p>
 
       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
         <motion.div
@@ -27,11 +35,49 @@ const SakuraStat = ({ age, height, power, delay }) => (
             delay: delay + 0.5,
             duration: 1.5,
           }}
-          className="h-full bg-gradient-to-r from-pink-400 to-rose-500"
+          className="h-full bg-gradient-to-r from-green-600 to-emerald-400"
         />
       </div>
 
       <p className="text-xs text-gray-400 mt-1">{power}</p>
+    </div>
+
+    {/* Wood Release */}
+    <div className="mt-3">
+      <p className="text-lime-300 text-xs mb-1">Wood Release</p>
+
+      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: woodRelease }}
+          transition={{
+            delay: delay + 0.8,
+            duration: 1.5,
+          }}
+          className="h-full bg-gradient-to-r from-lime-600 to-green-400"
+        />
+      </div>
+
+      <p className="text-xs text-gray-400 mt-1">{woodRelease}</p>
+    </div>
+
+    {/* Sage Mode */}
+    <div className="mt-3">
+      <p className="text-cyan-300 text-xs mb-1">Sage Mode</p>
+
+      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: sageMode }}
+          transition={{
+            delay: delay + 1.1,
+            duration: 1.5,
+          }}
+          className="h-full bg-gradient-to-r from-cyan-500 to-blue-400"
+        />
+      </div>
+
+      <p className="text-xs text-gray-400 mt-1">{sageMode}</p>
     </div>
   </motion.div>
 );
@@ -49,7 +95,7 @@ const imageVariant = {
   },
 };
 
-const Sakura2 = () => {
+const Hashirama2 = () => {
   return (
     <div className="flex flex-col items-center justify-between h-full gap-20">
       {/* Header */}
@@ -70,19 +116,19 @@ const Sakura2 = () => {
             }}
             className="p-2 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Sakura">
+            <Link to="/Hashirama">
               <ChevronLeft size={12} />
             </Link>
           </motion.button>
         </motion.div>
 
         <motion.h1
-          className="bg-gradient-to-r from-pink-400 via-rose-300 to-pink-500 bg-clip-text text-transparent text-2xl md:text-4xl font-serif tracking-[8px]"
+          className="bg-gradient-to-r from-green-500 via-emerald-300 to-lime-400 bg-clip-text text-transparent text-2xl md:text-4xl font-serif tracking-[8px]"
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
         >
-          SAKURA HARUNO
+          HASHIRAMA SENJU
         </motion.h1>
       </div>
 
@@ -90,122 +136,112 @@ const Sakura2 = () => {
       <div className="w-full rounded-3xl bg-black/40 backdrop-blur-lg border border-gray-800 p-8">
         <div className="flex flex-row items-end justify-between gap-5">
 
-          {/* Sakura 1 */}
+          {/* Hashirama 1 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{
-                duration: 1.5,
-                delay: 0,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              src="/Sakura1.svg"
-              alt="Young Sakura"
+              transition={{ duration: 1.5, delay: 0 }}
+              src="/Hashirama1.svg"
+              alt="Young Hashirama"
               className="h-60"
             />
 
-            <SakuraStat
-              age="8"
-              height="140 cm"
-              power="15%"
+            <HashiramaStat
+              age="10"
+              height="148 cm"
+              power="35%"
+              woodRelease="30%"
+              sageMode="0%"
               delay={0}
             />
           </div>
 
-          {/* Sakura 2 */}
+          {/* Hashirama 2 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{
-                duration: 1.5,
-                delay: 3,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              src="/Sakura2.svg"
-              alt="Genin Sakura"
+              transition={{ duration: 1.5, delay: 3 }}
+              src="/Hashirama2.svg"
+              alt="Young Warrior Hashirama"
               className="h-70 -mt-10"
             />
 
-            <SakuraStat
-              age="12"
-              height="150 cm"
-              power="35%"
+            <HashiramaStat
+              age="18"
+              height="170 cm"
+              power="60%"
+              woodRelease="70%"
+              sageMode="0%"
               delay={3}
             />
           </div>
 
-          {/* Sakura 3 */}
+          {/* Hashirama 3 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{
-                duration: 1.5,
-                delay: 6,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              src="/Sakura3.svg"
-              alt="Shippuden Sakura"
+              transition={{ duration: 1.5, delay: 6 }}
+              src="/Hashirama3.svg"
+              alt="Clan Leader Hashirama"
               className="h-90 -mt-20"
             />
 
-            <SakuraStat
-              age="15"
-              height="161 cm"
-              power="70%"
+            <HashiramaStat
+              age="25"
+              height="179 cm"
+              power="80%"
+              woodRelease="100%"
+              sageMode="50%"
               delay={6}
             />
           </div>
 
-          {/* Sakura 4 */}
+          {/* Hashirama 4 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{
-                duration: 1.5,
-                delay: 9,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              src="/Sakura4.svg"
-              alt="War Arc Sakura"
-              className="h-100 -mt-30"
+              transition={{ duration: 1.5, delay: 9 }}
+              src="/Hashirama4.svg"
+              alt="First Hokage"
+              className="h-105 -mt-30"
             />
 
-            <SakuraStat
-              age="16"
-              height="165 cm"
-              power="90%"
+            <HashiramaStat
+              age="35"
+              height="185 cm"
+              power="95%"
+              woodRelease="100%"
+              sageMode="90%"
               delay={9}
             />
           </div>
 
-          {/* Sakura 5 */}
+          {/* Hashirama 5 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
-              transition={{
-                duration: 1.5,
-                delay: 12,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              src="/Sakura5.svg"
-              alt="Adult Sakura"
-              className="h-120 -mt-40"
+              transition={{ duration: 1.5, delay: 12 }}
+              src="/Hashirama5.svg"
+              alt="Sage Hashirama"
+              className="h-110 -mt-36"
             />
 
-            <SakuraStat
-              age="17"
-              height="165 cm"
+            <HashiramaStat
+              age="Legend"
+              height="185 cm"
               power="100%"
+              woodRelease="100%"
+              sageMode="100%"
               delay={12}
             />
           </div>
@@ -216,4 +252,4 @@ const Sakura2 = () => {
   );
 };
 
-export default Sakura2;
+export default Hashirama2;

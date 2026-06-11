@@ -17,6 +17,14 @@ import Sasuke from "./page/Sasuke";
 import Sasuke2 from "./Components/icons/Sasuke2";
 import Itachi2 from "./Components/icons/Itachi2";
 import Itachi from "./page/Itachi";
+import Shisui from "./page/Shisui";
+import Shisui2 from "./Components/icons/Shisui2";
+import Obito2 from "./Components/icons/Obito2";
+import Obito from "./page/Obito";
+import Madara from "./page/Madara";
+import Madara2 from "./Components/icons/Madara2";
+import Hashirama from "./page/Hashirama";
+import Hashirama2 from "./Components/icons/Hashirama2";
 
 const App = () => {
   const location = useLocation();
@@ -122,6 +130,14 @@ const App = () => {
           <Route path="/Sasuke2" element={<Sasuke2/>} />
           <Route path="/Itachi" element={<Itachi/>} />
           <Route path="/Itachi2" element={<Itachi2/>} />
+          <Route path="/Shisui" element={<Shisui/>} />
+          <Route path="/Shisui2" element={<Shisui2/>} />
+          <Route path="/Obito" element={<Obito/>} />
+          <Route path="/Obito2" element={<Obito2/>} />
+          <Route path="/Madara" element={<Madara/>} />
+          <Route path="/Madara2" element={<Madara2/>} />
+          <Route path="/Hashirama" element={<Hashirama/>} />
+          <Route path="/Hashirama2" element={<Hashirama2/>} />
         </Routes>
       </motion.div>
     </div>
