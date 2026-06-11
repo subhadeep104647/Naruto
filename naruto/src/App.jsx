@@ -6,14 +6,19 @@ import Navebar from "./Components/Navebar";
 import Home from "./page/Home";
 import Hinata from "./page/Hinata";
 import Card from "./page/Card";
+import Naruto from "./page/Naruto";
+import Naruto2 from "./Components/icons/Naruto2";
+import Hinata2 from "./Components/icons/Hinata2";
 
 const App = () => {
   const location = useLocation();
 
   const backgroundImage =
     location.pathname === "/"
-      ? "/Bg.png" // Home page only
-      : "/Bg2.png"; // All other pages
+      ? "/Bg.png"
+      : location.pathname === "/Card"
+      ? "/Bg2.png"
+      : "/Bg3.png";
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -84,7 +89,7 @@ const App = () => {
 
       {/* Main Content */}
       <motion.div
-        className="relative z-20 px-20 py-5"
+        className="relative z-20 px-20 py-2"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -98,6 +103,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/Card" element={<Card />} />
           <Route path="/Hinata" element={<Hinata />} />
+          <Route path="/Naruto" element={<Naruto />} />
+          <Route path="/Naruto2" element={<Naruto2 />} />
+          <Route path="/Hinata2" element={<Hinata2 />} />
         </Routes>
       </motion.div>
     </div>

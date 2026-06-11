@@ -104,11 +104,21 @@ const Hinata = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Card">
+            <Link to="/Naruto">
               <ChevronLeft size={15} />
             </Link>
           </motion.button>
         </motion.div>
+
+        <div><Link to='/Hinata2'>
+           <motion.h1
+                   className="bg-gradient-to-r from-purple-400 via-pink-300 to-indigo-400 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px] text-shadow-2xl"
+                   initial={{ opacity: 0, y: 80 }}
+                   animate={{ opacity: 1, y: 0 }}
+                   transition={{ duration: 1.5 }}>
+                   SELECT HERO
+                   </motion.h1>
+        </Link></div>
 
         {/* Next */}
         <motion.div
@@ -126,7 +136,7 @@ const Hinata = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/">
+            <Link to="/Sakura">
               <ChevronRight size={15} />
             </Link>
           </motion.button>
