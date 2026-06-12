@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 
-const HashiramaStat = ({
+const InoStat = ({
   age,
   height,
   power,
-  woodRelease,
-  sageMode,
+  mindTransfer,
+  medicalNinjutsu,
   delay,
 }) => (
   <motion.div
@@ -18,14 +18,14 @@ const HashiramaStat = ({
       delay,
       duration: 1,
     }}
-    className="bg-black/60 backdrop-blur-md border border-green-700 rounded-xl p-3 mt-4 w-44"
+    className="bg-black/60 backdrop-blur-md border border-yellow-700 rounded-xl p-3 mt-4 w-44"
   >
     <p className="text-gray-300 text-xs">Age: {age}</p>
     <p className="text-gray-300 text-xs">Height: {height}</p>
 
     {/* Power */}
     <div className="mt-2">
-      <p className="text-green-300 text-xs mb-1">Power</p>
+      <p className="text-yellow-300 text-xs mb-1">Power</p>
 
       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
         <motion.div
@@ -35,49 +35,49 @@ const HashiramaStat = ({
             delay: delay + 0.5,
             duration: 1.5,
           }}
-          className="h-full bg-gradient-to-r from-green-600 to-emerald-400"
+          className="h-full bg-gradient-to-r from-yellow-400 to-amber-500"
         />
       </div>
 
       <p className="text-xs text-gray-400 mt-1">{power}</p>
     </div>
 
-    {/* Wood Release */}
+    {/* Mind Transfer */}
     <div className="mt-3">
-      <p className="text-lime-300 text-xs mb-1">Wood Release</p>
+      <p className="text-pink-300 text-xs mb-1">Mind Transfer</p>
 
       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: woodRelease }}
+          animate={{ width: mindTransfer }}
           transition={{
             delay: delay + 0.8,
             duration: 1.5,
           }}
-          className="h-full bg-gradient-to-r from-lime-600 to-green-400"
+          className="h-full bg-gradient-to-r from-pink-500 to-purple-400"
         />
       </div>
 
-      <p className="text-xs text-gray-400 mt-1">{woodRelease}</p>
+      <p className="text-xs text-gray-400 mt-1">{mindTransfer}</p>
     </div>
 
-    {/* Sage Mode */}
+    {/* Medical Ninjutsu */}
     <div className="mt-3">
-      <p className="text-cyan-300 text-xs mb-1">Sage Mode</p>
+      <p className="text-green-300 text-xs mb-1">Medical Ninjutsu</p>
 
       <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: sageMode }}
+          animate={{ width: medicalNinjutsu }}
           transition={{
             delay: delay + 1.1,
             duration: 1.5,
           }}
-          className="h-full bg-gradient-to-r from-cyan-500 to-blue-400"
+          className="h-full bg-gradient-to-r from-green-500 to-emerald-400"
         />
       </div>
 
-      <p className="text-xs text-gray-400 mt-1">{sageMode}</p>
+      <p className="text-xs text-gray-400 mt-1">{medicalNinjutsu}</p>
     </div>
   </motion.div>
 );
@@ -95,7 +95,7 @@ const imageVariant = {
   },
 };
 
-const Hashirama2 = () => {
+const Ino2 = () => {
   return (
     <div className="flex flex-col items-center justify-between h-full gap-20">
       {/* Header */}
@@ -116,19 +116,19 @@ const Hashirama2 = () => {
             }}
             className="p-2 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Hashirama">
+            <Link to="/Ino">
               <ChevronLeft size={12} />
             </Link>
           </motion.button>
         </motion.div>
 
         <motion.h1
-          className="bg-gradient-to-r from-green-500 via-emerald-300 to-lime-400 bg-clip-text text-transparent text-2xl md:text-4xl font-serif tracking-[8px]"
+          className="bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 bg-clip-text text-transparent text-2xl md:text-4xl font-serif tracking-[8px]"
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
         >
-          HASHIRAMA SENJU
+          INO YAMANAKA
         </motion.h1>
       </div>
 
@@ -136,112 +136,112 @@ const Hashirama2 = () => {
       <div className="w-full rounded-3xl bg-black/40 backdrop-blur-lg border border-gray-800 p-8">
         <div className="flex flex-row items-end justify-between gap-5">
 
-          {/* Hashirama 1 */}
+          {/* Ino 1 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
               transition={{ duration: 1.5, delay: 0 }}
-              src="/Hashirama1.svg"
-              alt="Young Hashirama"
+              src="/Ino1.svg"
+              alt="Young Ino"
               className="h-60"
             />
 
-            <HashiramaStat
-              age="10"
-              height="148 cm"
-              power="35%"
-              woodRelease="30%"
-              sageMode="0%"
+            <InoStat
+              age="8"
+              height="142 cm"
+              power="15%"
+              mindTransfer="10%"
+              medicalNinjutsu="0%"
               delay={0}
             />
           </div>
 
-          {/* Hashirama 2 */}
+          {/* Ino 2 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
               transition={{ duration: 1.5, delay: 3 }}
-              src="/Hashirama2.svg"
-              alt="Young Warrior Hashirama"
+              src="/Ino2.svg"
+              alt="Genin Ino"
               className="h-70 -mt-10"
             />
 
-            <HashiramaStat
-              age="18"
-              height="170 cm"
-              power="60%"
-              woodRelease="70%"
-              sageMode="0%"
+            <InoStat
+              age="12"
+              height="150 cm"
+              power="35%"
+              mindTransfer="30%"
+              medicalNinjutsu="0%"
               delay={3}
             />
           </div>
 
-          {/* Hashirama 3 */}
+          {/* Ino 3 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
               transition={{ duration: 1.5, delay: 6 }}
-              src="/Hashirama3.svg"
-              alt="Clan Leader Hashirama"
+              src="/Ino3.svg"
+              alt="Shippuden Ino"
               className="h-90 -mt-20"
             />
 
-            <HashiramaStat
-              age="25"
-              height="179 cm"
-              power="80%"
-              woodRelease="100%"
-              sageMode="20%"
+            <InoStat
+              age="16"
+              height="165 cm"
+              power="65%"
+              mindTransfer="80%"
+              medicalNinjutsu="40%"
               delay={6}
             />
           </div>
 
-          {/* Hashirama 4 */}
+          {/* Ino 4 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
               transition={{ duration: 1.5, delay: 9 }}
-              src="/Hashirama4.svg"
-              alt="First Hokage"
-              className="h-105 -mt-30"
+              src="/Ino4.svg"
+              alt="War Arc Ino"
+              className="h-100 -mt-30"
             />
 
-            <HashiramaStat
-              age="35"
-              height="185 cm"
-              power="95%"
-              woodRelease="100%"
-              sageMode="40%"
+            <InoStat
+              age="17"
+              height="168 cm"
+              power="90%"
+              mindTransfer="100%"
+              medicalNinjutsu="80%"
               delay={9}
             />
           </div>
 
-          {/* Hashirama 5 */}
+          {/* Ino 5 */}
           <div className="flex flex-col items-center">
             <motion.img
               variants={imageVariant}
               initial="hidden"
               animate="visible"
               transition={{ duration: 1.5, delay: 12 }}
-              src="/Hashirama5.svg"
-              alt="Sage Hashirama"
-              className="h-110 -mt-36"
+              src="/Ino5.svg"
+              alt="Adult Ino"
+              className="h-115 -mt-38"
             />
 
-            <HashiramaStat
-              age="Legend"
-              height="185 cm"
+            <InoStat
+              age="17"
+              height="168 cm"
               power="100%"
-              woodRelease="100%"
-              sageMode="100%"
+              mindTransfer="100%"
+              medicalNinjutsu="100%"
               delay={12}
             />
           </div>
@@ -252,4 +252,4 @@ const Hashirama2 = () => {
   );
 };
 
-export default Hashirama2;
+export default Ino2;

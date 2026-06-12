@@ -25,6 +25,8 @@ import Madara from "./page/Madara";
 import Madara2 from "./Components/icons/Madara2";
 import Hashirama from "./page/Hashirama";
 import Hashirama2 from "./Components/icons/Hashirama2";
+import Ino from "./page/Ino";
+import Ino2 from "./Components/icons/Ino2";
 
 const App = () => {
   const location = useLocation();
@@ -138,6 +140,8 @@ const App = () => {
           <Route path="/Madara2" element={<Madara2/>} />
           <Route path="/Hashirama" element={<Hashirama/>} />
           <Route path="/Hashirama2" element={<Hashirama2/>} />
+          <Route path="/Ino" element={<Ino/>} />
+          <Route path="/Ino2" element={<Ino2/>} />
         </Routes>
       </motion.div>
     </div>

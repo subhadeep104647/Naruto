@@ -78,7 +78,7 @@ const Hashirama = () => {
             }}
           >
             <img
-              src="/Hashirama.svg"
+              src="/Hashirama2.svg"
               alt="Hashirama Senju"
               className="h-150"
             />

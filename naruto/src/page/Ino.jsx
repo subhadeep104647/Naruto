@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const Kakashi = () => {
+const Ino = () => {
   return (
     <>
       <div className="flex flex-row w-full mt-3 items-center justify-between gap-5">
@@ -22,8 +22,8 @@ const Kakashi = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 1.2 }}
           >
-            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-blue-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
-              COPY NINJA
+            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-yellow-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
+              YAMANAKA HEIRESS
             </h1>
           </motion.div>
 
@@ -33,13 +33,13 @@ const Kakashi = () => {
             transition={{ delay: 0.5, duration: 1.8 }}
           >
             <h1 className="text-gray-300 font-sans text-3xl tracking-wide leading-15">
-              THOSE WHO BREAK THE RULES
+              TRUE BEAUTY ISN'T
               <br />
-              ARE SCUM
+              JUST APPEARANCE
               <br />
-              BUT THOSE WHO ABANDON
+              IT'S THE STRENGTH
               <br />
-              THEIR FRIENDS ARE WORSE
+              OF YOUR HEART
             </h1>
           </motion.div>
 
@@ -48,14 +48,13 @@ const Kakashi = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 2.2 }}
           >
-            <p className="text-blue-300 text-lg tracking-wide leading-8">
-              Kakashi Hatake is one of the most respected shinobi in
-              Konohagakure and the legendary leader of Team 7. Known as the
-              Copy Ninja, Kakashi mastered over a thousand jutsu and earned
-              fame throughout the ninja world. Despite his calm and laid-back
-              personality, he possesses exceptional intelligence, leadership,
-              and combat skills. He later became the Sixth Hokage and played a
-              crucial role in ending the Fourth Great Ninja War.
+            <p className="text-yellow-300 text-lg tracking-wide leading-8">
+              Ino Yamanaka is a skilled kunoichi of Konohagakure and a member
+              of Team 10. As the heir of the Yamanaka Clan, she specializes in
+              mind-based techniques such as the Mind Transfer Jutsu. Alongside
+              her abilities as a sensory ninja and medical ninja, Ino played a
+              vital role during the Fourth Great Ninja War and became one of
+              the Hidden Leaf Village's most trusted shinobi.
             </p>
           </motion.div>
         </motion.div>
@@ -79,8 +78,8 @@ const Kakashi = () => {
             }}
           >
             <img
-              src="/Kakashi.svg"
-              alt="Kakashi Hatake"
+              src="/Ino.svg"
+              alt="Ino Yamanaka"
               className="h-150"
             />
           </motion.div>
@@ -105,16 +104,17 @@ const Kakashi = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Sakura">
+            <Link to="/Kakashi">
               <ChevronLeft size={15} />
             </Link>
           </motion.button>
         </motion.div>
 
+        {/* Select Hero */}
         <div>
-          <Link to="/Kakashi2">
+          <Link to="/Ino2">
             <motion.h1
-              className="bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-500 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px]"
+              className="bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px]"
               initial={{ opacity: 0, y: 80 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5 }}
@@ -140,7 +140,7 @@ const Kakashi = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Ino">
+            <Link to="/">
               <ChevronRight size={15} />
             </Link>
           </motion.button>
@@ -150,4 +150,4 @@ const Kakashi = () => {
   );
 };
 
-export default Kakashi;
+export default Ino;
