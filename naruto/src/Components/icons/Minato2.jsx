@@ -152,7 +152,7 @@ const Minato2 = () => {
             <MinatoStat
               age="8"
               height="145 cm"
-              power="25%"
+              power="45%"
               flyingRaijin="0%"
               Sage="0%"
               delay={0}
@@ -174,9 +174,9 @@ const Minato2 = () => {
             <MinatoStat
               age="12"
               height="165 cm"
-              power="45%"
-              flyingRaijin="5%"
-              Sage="0%"
+              power="65%"
+              flyingRaijin="15%"
+              Sage="35%"
               delay={3}
             />
           </div>
@@ -196,8 +196,8 @@ const Minato2 = () => {
             <MinatoStat
               age="15"
               height="179 cm"
-              power="80%"
-              flyingRaijin="85%"
+              power="90%"
+              flyingRaijin="95%"
               sage="75%"
               delay={6}
             />
@@ -218,7 +218,7 @@ const Minato2 = () => {
             <MinatoStat
               age="24"
               height="179 cm"
-              power="95%"
+              power="100%"
               flyingRaijin="100%"
               sage="100%"
               delay={9}
