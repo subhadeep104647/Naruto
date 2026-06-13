@@ -35,6 +35,16 @@ import Neji from "./page/Neji";
 import Neji2 from "./Components/icons/Neji2";
 import Tenten from "./page/Tenten";
 import Tenten2 from "./Components/icons/Tenten2";
+import Shikamaru from "./page/Shikamaru";
+import Shikamaru2 from "./Components/icons/Shikamaru2";
+import Choji from "./page/Choji";
+import Choji2 from "./Components/icons/Choji2";
+import Tobirama from "./page/Tobirama";
+import Tobirama2 from "./page/Tobirama2";
+import Hiruzen from "./page/Hiruzen";
+import Hiruzen2 from "./Components/icons/Hiruzen2";
+import Minato from "./page/Minato";
+import Minato2 from "./Components/icons/Minato2";
 
 const App = () => {
   const location = useLocation();
@@ -158,6 +168,16 @@ const App = () => {
           <Route path="/Neji2" element={<Neji2/>} />
           <Route path="/Tenten" element={<Tenten/>} />
           <Route path="/Tenten2" element={<Tenten2/>} />
+          <Route path="/Shikamaru" element={<Shikamaru/>} />
+          <Route path="/Shikamaru2" element={<Shikamaru2/>} />
+          <Route path="/Choji" element={<Choji/>} />
+          <Route path="/Choji2" element={<Choji2/>} />
+          <Route path="/Tobirama" element={<Tobirama/>} />
+          <Route path="/Tobirama2" element={<Tobirama2/>} />
+          <Route path="/Hiruzen" element={<Hiruzen/>} />
+          <Route path="/Hiruzen2" element={<Hiruzen2/>} />
+          <Route path="/Minato" element={<Minato/>} />
+          <Route path="/Minato2" element={<Minato2/>} />
         </Routes>
       </motion.div>
     </div>

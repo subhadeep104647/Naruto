@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const Ino = () => {
+const Tobirama = () => {
   return (
     <>
       <div className="flex flex-row w-full mt-3 items-center justify-between gap-5">
@@ -22,8 +22,8 @@ const Ino = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 1.2 }}
           >
-            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-yellow-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
-              YAMANAKA HEIRESS
+            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-cyan-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
+              SECOND HOKAGE
             </h1>
           </motion.div>
 
@@ -33,13 +33,13 @@ const Ino = () => {
             transition={{ delay: 0.5, duration: 1.8 }}
           >
             <h1 className="text-gray-300 font-sans text-3xl tracking-wide leading-15">
-              TRUE BEAUTY ISN'T
+              A VILLAGE MUST BE
               <br />
-              JUST APPEARANCE
+              PROTECTED BY RULES
               <br />
-              IT'S THE STRENGTH
+              AND THOSE WHO HAVE
               <br />
-              OF YOUR HEART
+              THE WILL TO DEFEND IT
             </h1>
           </motion.div>
 
@@ -48,13 +48,14 @@ const Ino = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 2.2 }}
           >
-            <p className="text-yellow-300 text-lg tracking-wide leading-8">
-              Ino Yamanaka is a skilled kunoichi of Konohagakure and a member
-              of Team 10. As the heir of the Yamanaka Clan, she specializes in
-              mind-based techniques such as the Mind Transfer Jutsu. Alongside
-              her abilities as a sensory ninja and medical ninja, Ino played a
-              vital role during the Fourth Great Ninja War and became one of
-              the Hidden Leaf Village's most trusted shinobi.
+            <p className="text-cyan-300 text-lg tracking-wide leading-8">
+              Tobirama Senju was the Second Hokage of Konohagakure and the
+              younger brother of Hashirama Senju. Known for his brilliant
+              intellect and mastery of Water Release techniques, Tobirama
+              created many powerful jutsu including the Shadow Clone Jutsu,
+              Flying Raijin Technique, and Edo Tensei. His leadership,
+              innovation, and dedication helped shape the Hidden Leaf Village
+              into a powerful shinobi nation.
             </p>
           </motion.div>
         </motion.div>
@@ -78,8 +79,8 @@ const Ino = () => {
             }}
           >
             <img
-              src="/Ino.svg"
-              alt="Ino Yamanaka"
+              src="/Tobirama3.svg"
+              alt="Tobirama Senju"
               className="h-150"
             />
           </motion.div>
@@ -104,7 +105,7 @@ const Ino = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Tenten">
+            <Link to="/Hiruzen">
               <ChevronLeft size={15} />
             </Link>
           </motion.button>
@@ -112,9 +113,9 @@ const Ino = () => {
 
         {/* Select Hero */}
         <div>
-          <Link to="/Ino2">
+          <Link to="/Tobirama2">
             <motion.h1
-              className="bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px]"
+              className="bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px]"
               initial={{ opacity: 0, y: 80 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5 }}
@@ -140,7 +141,7 @@ const Ino = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Shikamaru">
+            <Link to="/Hashirama">
               <ChevronRight size={15} />
             </Link>
           </motion.button>
@@ -150,4 +151,4 @@ const Ino = () => {
   );
 };
 
-export default Ino;
+export default Tobirama;

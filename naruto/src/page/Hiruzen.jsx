@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const Ino = () => {
+const Hiruzen = () => {
   return (
     <>
       <div className="flex flex-row w-full mt-3 items-center justify-between gap-5">
@@ -22,8 +22,8 @@ const Ino = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 1.2 }}
           >
-            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-yellow-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
-              YAMANAKA HEIRESS
+            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-amber-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
+              THE PROFESSOR
             </h1>
           </motion.div>
 
@@ -33,13 +33,13 @@ const Ino = () => {
             transition={{ delay: 0.5, duration: 1.8 }}
           >
             <h1 className="text-gray-300 font-sans text-3xl tracking-wide leading-15">
-              TRUE BEAUTY ISN'T
+              A TRUE HOKAGE
               <br />
-              JUST APPEARANCE
+              PROTECTS THE VILLAGE
               <br />
-              IT'S THE STRENGTH
+              AS IF EVERYONE
               <br />
-              OF YOUR HEART
+              WERE HIS FAMILY
             </h1>
           </motion.div>
 
@@ -48,13 +48,14 @@ const Ino = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 2.2 }}
           >
-            <p className="text-yellow-300 text-lg tracking-wide leading-8">
-              Ino Yamanaka is a skilled kunoichi of Konohagakure and a member
-              of Team 10. As the heir of the Yamanaka Clan, she specializes in
-              mind-based techniques such as the Mind Transfer Jutsu. Alongside
-              her abilities as a sensory ninja and medical ninja, Ino played a
-              vital role during the Fourth Great Ninja War and became one of
-              the Hidden Leaf Village's most trusted shinobi.
+            <p className="text-amber-300 text-lg tracking-wide leading-8">
+              Hiruzen Sarutobi was the Third Hokage of Konohagakure and one of
+              the most respected shinobi in history. Known as "The Professor,"
+              he mastered every jutsu in the Hidden Leaf Village and trained
+              legendary ninja such as Jiraiya, Tsunade, and Orochimaru.
+              Hiruzen led the village through multiple wars and crises,
+              dedicating his life to protecting the Will of Fire and future
+              generations.
             </p>
           </motion.div>
         </motion.div>
@@ -78,8 +79,8 @@ const Ino = () => {
             }}
           >
             <img
-              src="/Ino.svg"
-              alt="Ino Yamanaka"
+              src="/Hiruzen3.svg"
+              alt="Hiruzen Sarutobi"
               className="h-150"
             />
           </motion.div>
@@ -104,7 +105,7 @@ const Ino = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Tenten">
+            <Link to="/Minato">
               <ChevronLeft size={15} />
             </Link>
           </motion.button>
@@ -112,9 +113,9 @@ const Ino = () => {
 
         {/* Select Hero */}
         <div>
-          <Link to="/Ino2">
+          <Link to="/Hiruzen2">
             <motion.h1
-              className="bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px]"
+              className="bg-gradient-to-r from-amber-400 via-yellow-300 to-orange-500 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px]"
               initial={{ opacity: 0, y: 80 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5 }}
@@ -140,7 +141,7 @@ const Ino = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Shikamaru">
+            <Link to="/Tobirama">
               <ChevronRight size={15} />
             </Link>
           </motion.button>
@@ -150,4 +151,4 @@ const Ino = () => {
   );
 };
 
-export default Ino;
+export default Hiruzen;

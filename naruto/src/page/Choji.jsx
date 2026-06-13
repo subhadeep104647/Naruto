@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const Ino = () => {
+const Choji = () => {
   return (
     <>
       <div className="flex flex-row w-full mt-3 items-center justify-between gap-5">
@@ -22,8 +22,8 @@ const Ino = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 1.2 }}
           >
-            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-yellow-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
-              YAMANAKA HEIRESS
+            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-red-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
+              AKIMICHI WARRIOR
             </h1>
           </motion.div>
 
@@ -33,13 +33,13 @@ const Ino = () => {
             transition={{ delay: 0.5, duration: 1.8 }}
           >
             <h1 className="text-gray-300 font-sans text-3xl tracking-wide leading-15">
-              TRUE BEAUTY ISN'T
+              TRUE STRENGTH COMES
               <br />
-              JUST APPEARANCE
+              FROM PROTECTING
               <br />
-              IT'S THE STRENGTH
+              THE PEOPLE YOU LOVE
               <br />
-              OF YOUR HEART
+              NO MATTER WHAT
             </h1>
           </motion.div>
 
@@ -48,13 +48,14 @@ const Ino = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 2.2 }}
           >
-            <p className="text-yellow-300 text-lg tracking-wide leading-8">
-              Ino Yamanaka is a skilled kunoichi of Konohagakure and a member
-              of Team 10. As the heir of the Yamanaka Clan, she specializes in
-              mind-based techniques such as the Mind Transfer Jutsu. Alongside
-              her abilities as a sensory ninja and medical ninja, Ino played a
-              vital role during the Fourth Great Ninja War and became one of
-              the Hidden Leaf Village's most trusted shinobi.
+            <p className="text-red-300 text-lg tracking-wide leading-8">
+              Choji Akimichi is a loyal shinobi of Konohagakure and a member of
+              Team 10. As a member of the Akimichi Clan, he specializes in
+              expanding and manipulating his body size during battle. Though
+              gentle and kind-hearted, Choji becomes an unstoppable force when
+              his friends are threatened. His courage, determination, and
+              immense physical strength make him one of the Hidden Leaf's most
+              dependable warriors.
             </p>
           </motion.div>
         </motion.div>
@@ -78,8 +79,8 @@ const Ino = () => {
             }}
           >
             <img
-              src="/Ino.svg"
-              alt="Ino Yamanaka"
+              src="/Choji2.svg"
+              alt="Choji Akimichi"
               className="h-150"
             />
           </motion.div>
@@ -104,7 +105,7 @@ const Ino = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Tenten">
+            <Link to="/Shikamaru">
               <ChevronLeft size={15} />
             </Link>
           </motion.button>
@@ -112,9 +113,9 @@ const Ino = () => {
 
         {/* Select Hero */}
         <div>
-          <Link to="/Ino2">
+          <Link to="/Choji2">
             <motion.h1
-              className="bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px]"
+              className="bg-gradient-to-r from-red-500 via-orange-400 to-yellow-400 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px]"
               initial={{ opacity: 0, y: 80 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5 }}
@@ -140,7 +141,7 @@ const Ino = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Shikamaru">
+            <Link to="/">
               <ChevronRight size={15} />
             </Link>
           </motion.button>
@@ -150,4 +151,4 @@ const Ino = () => {
   );
 };
 
-export default Ino;
+export default Choji;
