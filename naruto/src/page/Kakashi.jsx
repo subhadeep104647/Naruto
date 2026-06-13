@@ -140,7 +140,7 @@ const Kakashi = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Ino">
+            <Link to="/Guy">
               <ChevronRight size={15} />
             </Link>
           </motion.button>

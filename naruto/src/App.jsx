@@ -27,6 +27,14 @@ import Hashirama from "./page/Hashirama";
 import Hashirama2 from "./Components/icons/Hashirama2";
 import Ino from "./page/Ino";
 import Ino2 from "./Components/icons/Ino2";
+import Guy from "./page/Guy";
+import Guy2 from "./Components/icons/Guy2";
+import Lee from "./page/Lee";
+import Lee2 from "./Components/icons/Lee2";
+import Neji from "./page/Neji";
+import Neji2 from "./Components/icons/Neji2";
+import Tenten from "./page/Tenten";
+import Tenten2 from "./Components/icons/Tenten2";
 
 const App = () => {
   const location = useLocation();
@@ -142,6 +150,14 @@ const App = () => {
           <Route path="/Hashirama2" element={<Hashirama2/>} />
           <Route path="/Ino" element={<Ino/>} />
           <Route path="/Ino2" element={<Ino2/>} />
+          <Route path="/Guy" element={<Guy/>} />
+          <Route path="/Guy2" element={<Guy2/>} />
+          <Route path="/Lee" element={<Lee/>} />
+          <Route path="/Lee2" element={<Lee2/>} />
+          <Route path="/Neji" element={<Neji/>} />
+          <Route path="/Neji2" element={<Neji2/>} />
+          <Route path="/Tenten" element={<Tenten/>} />
+          <Route path="/Tenten2" element={<Tenten2/>} />
         </Routes>
       </motion.div>
     </div>
