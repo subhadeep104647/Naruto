@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const Jiraiya = () => {
+const Orochimaru = () => {
   return (
     <>
       <div className="flex flex-row w-full mt-3 items-center justify-between gap-5">
@@ -22,8 +22,8 @@ const Jiraiya = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 1.2 }}
           >
-            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-red-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
-              TOAD SAGE
+            <h1 className="text-gray-200 tracking-widest text-sm font-semibold border-2 border-purple-500 w-50 flex items-center justify-center py-1 rounded-full bg-white/5 backdrop-blur-2xl">
+              LEGENDARY SANIN
             </h1>
           </motion.div>
 
@@ -33,13 +33,13 @@ const Jiraiya = () => {
             transition={{ delay: 0.5, duration: 1.8 }}
           >
             <h1 className="text-gray-300 font-sans text-3xl tracking-wide leading-15">
-              A PERSON GROWS
+              KNOWLEDGE IS THE
               <br />
-              WHEN THEY ARE ABLE
+              TRUE PATH TO
               <br />
-              TO OVERCOME
+              POWER AND
               <br />
-              THEIR FAILURES
+              IMMORTALITY
             </h1>
           </motion.div>
 
@@ -48,14 +48,14 @@ const Jiraiya = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 2.2 }}
           >
-            <p className="text-red-300 text-lg tracking-wide leading-8">
-              Jiraiya was one of the Legendary Sannin of Konohagakure and the
-              mentor of Minato Namikaze, Naruto Uzumaki, and many other
-              shinobi. Known as the "Toad Sage," he mastered Sage Mode,
-              powerful summoning techniques, and countless ninjutsu. Despite
-              his carefree personality, Jiraiya devoted his life to protecting
-              the Hidden Leaf Village and searching for the Child of Prophecy
-              who would bring peace to the shinobi world.
+            <p className="text-purple-300 text-lg tracking-wide leading-8">
+              Orochimaru was one of the Legendary Sannin of Konohagakure and
+              one of the most brilliant shinobi in history. Driven by an
+              insatiable desire for knowledge, he devoted his life to
+              mastering every jutsu and uncovering the secrets of immortality.
+              Despite walking a dark path, Orochimaru's genius, scientific
+              research, and countless innovations left a lasting impact on the
+              shinobi world.
             </p>
           </motion.div>
         </motion.div>
@@ -79,8 +79,8 @@ const Jiraiya = () => {
             }}
           >
             <img
-              src="/Jiraiya4.svg"
-              alt="Jiraiya"
+              src="/Orochimaru4.svg"
+              alt="Orochimaru"
               className="h-150"
             />
           </motion.div>
@@ -105,7 +105,7 @@ const Jiraiya = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Oruchimaru">
+            <Link to="/Kabuto">
               <ChevronLeft size={15} />
             </Link>
           </motion.button>
@@ -113,9 +113,9 @@ const Jiraiya = () => {
 
         {/* Select Hero */}
         <div>
-          <Link to="/Jiraiya2">
+          <Link to="/Orochimaru2">
             <motion.h1
-              className="bg-gradient-to-r from-red-400 via-orange-300 to-red-500 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px]"
+              className="bg-gradient-to-r from-purple-400 via-fuchsia-300 to-violet-500 bg-clip-text text-transparent text-xl md:text-2xl font-serif tracking-[8px]"
               initial={{ opacity: 0, y: 80 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5 }}
@@ -141,7 +141,7 @@ const Jiraiya = () => {
             }}
             className="p-4 rounded-full border border-gray-400 text-gray-300 shadow-lg"
           >
-            <Link to="/Tsunade">
+            <Link to="/Jiraiya">
               <ChevronRight size={15} />
             </Link>
           </motion.button>
@@ -151,4 +151,4 @@ const Jiraiya = () => {
   );
 };
 
-export default Jiraiya;
+export default Orochimaru;

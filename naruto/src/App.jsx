@@ -49,6 +49,11 @@ import Tsunade from "./page/Tsunade";
 import Tsunade2 from "./Components/icons/Tsunade2";
 import Jiraiya from "./page/Jiraiya";
 import Jiraiya2 from "./Components/icons/Jiraiya2";
+import About from "./page/About";
+import Calender from "./page/Calender";
+import Contact from "./page/Contact";
+import Orochimaru from "./page/Oruchimaru";
+import Orochimaru2 from "./Components/icons/Oruchimaru2";
 
 const App = () => {
   const location = useLocation();
@@ -186,6 +191,14 @@ const App = () => {
           <Route path="/Tsunade2" element={<Tsunade2/>} />
           <Route path="/Jiraiya" element={<Jiraiya/>} />
           <Route path="/Jiraiya2" element={<Jiraiya2/>} />
+          <Route path="/Orochimaru" element={<Orochimaru/>} />
+          <Route path="/Orochimaru2" element={<Orochimaru2/>} />
+
+
+
+          <Route path="/About" element={<About/>} />
+          <Route path="/Calender" element={<Calender/>} />
+          <Route path="/Contact" element={<Contact/>} />
         </Routes>
       </motion.div>
     </div>
