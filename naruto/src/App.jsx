@@ -45,6 +45,10 @@ import Hiruzen from "./page/Hiruzen";
 import Hiruzen2 from "./Components/icons/Hiruzen2";
 import Minato from "./page/Minato";
 import Minato2 from "./Components/icons/Minato2";
+import Tsunade from "./page/Tsunade";
+import Tsunade2 from "./Components/icons/Tsunade2";
+import Jiraiya from "./page/Jiraiya";
+import Jiraiya2 from "./Components/icons/Jiraiya2";
 
 const App = () => {
   const location = useLocation();
@@ -178,6 +182,10 @@ const App = () => {
           <Route path="/Hiruzen2" element={<Hiruzen2/>} />
           <Route path="/Minato" element={<Minato/>} />
           <Route path="/Minato2" element={<Minato2/>} />
+          <Route path="/Tsunade" element={<Tsunade/>} />
+          <Route path="/Tsunade2" element={<Tsunade2/>} />
+          <Route path="/Jiraiya" element={<Jiraiya/>} />
+          <Route path="/Jiraiya2" element={<Jiraiya2/>} />
         </Routes>
       </motion.div>
     </div>
