@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const heroes = [
   {
+    Link:"/Naruto",
     name: "NARUTO",
     title: "SEVENTH HOKAGE",
     image: "/Naruto5.svg",
@@ -10,6 +12,7 @@ const heroes = [
     glowColor: "bg-orange-500/30",
   },
   {
+    Link:"/Sasuke",
     name: "SASUKE",
     title: "SHADOW HOKAGE",
     image: "/Sasuke5.svg",
@@ -17,6 +20,7 @@ const heroes = [
     glowColor: "bg-purple-500/30",
   },
   {
+    Link:"/Minato",
     name: "MINATO",
     title: "YELLOW FLASH",
     image: "/Minato5.svg",
@@ -24,6 +28,7 @@ const heroes = [
     glowColor: "bg-yellow-500/30",
   },
   {
+    Link:"/Itachi",
     name: "ITACHI",
     title: "UCHIHA PRODIGY",
     image: "/Itachi5.svg",
@@ -31,6 +36,7 @@ const heroes = [
     glowColor: "bg-red-500/30",
   },
   {
+    Link:"/Madara",
     name: "MADARA",
     title: "GHOST OF UCHIHA",
     image: "/Madara5.svg",
@@ -38,6 +44,7 @@ const heroes = [
     glowColor: "bg-red-600/30",
   },
   {
+    Link:"/Hashirama",
     name: "HASHIRAMA",
     title: "GOD OF SHINOBI",
     image: "/Hashirama5.svg",
@@ -45,6 +52,7 @@ const heroes = [
     glowColor: "bg-green-500/30",
   },
   {
+    Link:"/Tobirama",
     name: "TOBIRAMA",
     title: "SECOND HOKAGE",
     image: "/Tobirama5.svg",
@@ -52,6 +60,7 @@ const heroes = [
     glowColor: "bg-cyan-500/30",
   },
   {
+    Link:"/Hiruzen",
     name: "HIRUZEN",
     title: "PROFESSOR",
     image: "/Hiruzen5.svg",
@@ -59,6 +68,7 @@ const heroes = [
     glowColor: "bg-amber-500/30",
   },
   {
+    Link:"/Jiraiya",
     name: "JIRAIYA",
     title: "LEGENDARY SANIN",
     image: "/Jiraiya5.svg",
@@ -66,6 +76,7 @@ const heroes = [
     glowColor: "bg-red-500/30",
   },
   {
+    Link:"/Tsunade",
     name: "TSUNADE",
     title: "FIFTH HOKAGE",
     image: "/Tsunade5.svg",
@@ -73,6 +84,7 @@ const heroes = [
     glowColor: "bg-pink-500/30",
   },
   {
+    Link:"/Orochimaru",
     name: "OROCHIMARU",
     title: "SNAKE SANIN",
     image: "/Orochimaru5.svg",
@@ -80,6 +92,7 @@ const heroes = [
     glowColor: "bg-purple-600/30",
   },
   {
+    Link:"/Kakashi",
     name: "KAKASHI",
     title: "COPY NINJA",
     image: "/Kakashi5.svg",
@@ -93,7 +106,9 @@ const Card = () => {
   return (
     <div className="flex flex-wrap justify-center gap-10 p-10">
       {heroes.map((hero, index) => (
-        <motion.div
+        <button>
+          <Link to={hero.Link}>
+          <motion.div
           key={index}
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
@@ -185,7 +200,8 @@ const Card = () => {
               />
             </div>
           </div>
-        </motion.div>
+        </motion.div></Link>
+        </button>
       ))}
     </div>
   );
